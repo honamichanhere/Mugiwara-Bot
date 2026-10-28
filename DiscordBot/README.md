@@ -60,7 +60,7 @@ The installed version (from `Mugiwara-Bot-Setup-<version>.exe`) checks GitHub Re
 3. On GitHub, create a **new Release** with the tag `v1.1.1` (not a draft, not a pre-release).
 4. Upload these three files from `../Installer/`: `Mugiwara-Bot-Setup-1.1.1.exe`, `Mugiwara-Bot-Setup-1.1.1.exe.blockmap`, and `latest.yml`.
 
-Installed apps pick it up on their next check. The updater always reads the **latest** release of the repository set in `package.json` (`build.publish`), so only publish bot releases there, or point `build.publish` at a dedicated repository.
+Installed apps pick it up on their next check. The updater always reads the **latest** release of the repository set in `package.json` (`build.publish`, currently `honamichanhere/Mugiwara-Bot`). The repository must stay public, otherwise installed apps cannot read the releases.
 
 ## Project layout
 
