@@ -1,0 +1,17 @@
+# Secrets and local data - never commit
+.env
+*.env
+token.bin
+
+# Dependencies and build output
+node_modules/
+dist/
+Installer/
+*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

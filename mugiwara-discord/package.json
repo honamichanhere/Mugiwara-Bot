@@ -1,0 +1,8 @@
+{
+  "name": "mugiwara-discord-setup",
+  "version": "1.0.0",
+  "private": true,
+  "main": "setup.js",
+  "scripts": { "setup": "node setup.js", "panel": "node panel.js" },
+  "dependencies": { "discord.js": "^14.16.0", "dotenv": "^16.4.5" }
+}

@@ -1,0 +1,59 @@
+{
+  "name": "mugiwara-bot",
+  "productName": "Mugiwara Bot",
+  "version": "1.1.0",
+  "description": "Desktop client for running and controlling the Mugiwara HUB Discord bot",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "icon": "node scripts/make-icon.js",
+    "dist": "electron-builder --win --publish never"
+  },
+  "dependencies": {
+    "discord.js": "^14.16.0",
+    "electron-updater": "^6.8.11"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.mugiwara.botpanel",
+    "productName": "Mugiwara Bot",
+    "directories": {
+      "output": "../Installer"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "src/**",
+      "renderer/**",
+      "assets/**",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "assets/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "artifactName": "Mugiwara-Bot-Setup-${version}.exe"
+    },
+    "portable": {
+      "artifactName": "Mugiwara-Bot-${version}-portable.exe"
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "honamichanhere",
+        "repo": "Mugiwara-HUB"
+      }
+    ]
+  }
+}
